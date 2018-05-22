@@ -105,18 +105,25 @@ $(function () {
     describe('New Feed Selection', function () {
     
 
-        var feddign;
+        var oldFeed;
+        var newFeed;
 
         beforeEach(function (completes) {
             loadFeed(0, function () {
-                feddign = $('.feed').html();
+                oldFeed = $('.feed').find('h2')[0].innerText;
                 completes();
             });
         });
 
+        afterEach(function (completes) {
+            loadFeed(0, completes);
+        });
+
         it('that the content actually changes.', function (completes) {
             loadFeed(1, function () {
-                expect($('.feed').html()).not.toEqual(feddign);
+            	newFeed = $('.feed').find('h2')[0].innerText;
+
+                expect(oldFeed).not.toEqual(newFeed);
                 completes();
             });
         });
