@@ -9,6 +9,14 @@ Testing is an important part of the development process and many organizations p
 
 Whether you work in an organization that uses test-driven development or in an organization that uses tests to make sure future feature development doesn't break existing features, it's an important skill to have!
 
+# Steps to run application
+
+To start the app, open index.html in your browser. 
+
+The tests were written in the feedreader.js file. The test results
+appears at the bottom of the index.html page.
+
+Tests that are green have passed and red have failed.
 
 # How it work ?
 
@@ -29,3 +37,14 @@ Whether you work in an organization that uses test-driven development or in an o
 8. a test suite named "New Feed Selection".
 
 9.  a test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
+
+
+## The tests:
+
+1. tests to make sure that the allFeeds variable has been defined and that it is not empty.
+2. loops through each feed and determines if the URL is defined and not empty.
+3. loops through each feed and determines that each feed has a name and not empty.
+4. ensures the menu element is hidden by default.
+5. validates proper functioning of the hamburger menu toggle.
+6. tests that there is at least one entry in feed.
+7. tests that new content is loaded by loadFeed().
